@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jsnlog.min.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <h1></h1>
+
+    <script type="text/javascript">
+  
+        window.onerror = function (msg, url, line, col, exception) {
+            JL().fatalException(msg, exception);
+        }
+
+        JL().info("Javascript test log");        
+        JL("jsLogger").info("log message");
+        
+
+        try {
+            throw DOMException();
+        } catch (e) {
+            //JL().fatalException("Exception info", e);
+        }
+
+    </script>
+</body>
+</html>
